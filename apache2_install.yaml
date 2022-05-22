@@ -1,0 +1,22 @@
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  become: yes
+  tasks:
+  - name: Install apache packages 
+    apt:
+      name: apache2
+      state: present      
+  - name: Move directory contents
+    become: yes 
+    copy:
+      src: my-website/.
+      dest: /var/www/html      
+      
+  
+
+  - name: ensure apache2 is running
+    service:
+      name: apache2 
+      state: started
+ 
