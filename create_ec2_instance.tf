@@ -1,8 +1,8 @@
 provider "aws" {
   profile = "default"
   region  = "us-east-1"
-  access_key = "AKIAQNFP3FUJBR4DBTO9"
-  secret_key = "XPaChv/LSOaUv/B5bb51MPdJGcmNPkGeRQkHTY5d"
+  access_key = ""
+  secret_key = ""
 }
 
 resource "aws_security_group" "allow_tls" {
